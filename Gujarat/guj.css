@@ -1,0 +1,135 @@
+:root{
+    --orange:#f79f1f;
+    --text-color-1: #444;
+    --text-color-2: #666;
+    --bg-color-1: #fafafa ;
+    --bg-color-2: #fbeeee ;
+    --box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.1);
+}
+
+*{
+    font-family: "Syne", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none; border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+    
+}
+
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 7rem;
+    scroll-behavior: smooth;  
+}
+
+html::-webkit-scrollbar{
+    display: none;
+}
+
+
+/* Package Plane Start */
+
+.heading{
+    text-align: center;
+    padding-bottom: 2rem;
+    color: var(--text-color-1);
+    font-size: 4rem;
+}
+
+.heading span {
+    position: relative;
+    z-index: 0;
+}
+
+.heading span::before{
+    content: '';
+    position: absolute;
+    bottom: 1rem; left: 0;
+    z-index: -1;
+    background: orange;
+    height: 100%;
+    width: 100%;
+    clip-path: polygon(0 90%, 100% 83%, 100% 100%, 0% 100%);
+}
+
+.packages .box-container {
+    /* display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(34rem,1fr)); */
+    gap: 1.5rem;
+
+}
+
+.packages .box-container .box {
+    background: var(--bg-color-1);
+    border-radius: 1.5rem;
+    box-shadow: var(--box-shadow);
+
+}
+
+.packages .box-container .box .image {
+    height: 25rem;
+    width: 100%;
+    padding: 1.5rem;
+    position: relative;
+
+}
+
+.packages .box-container .box .image img{
+    height: 100%;
+    width: 34rem;
+    object-fit: cover;
+    border-radius: .5rem;
+}
+
+.box .image iframe{
+    height: 100%;
+    width: 43rem;
+    object-fit: cover;
+    border-radius: .5rem;
+    margin-left: 1.6rem;   
+}
+
+.packages .box-container .box .image h3{
+    position: absolute;
+    top: 2.5rem; left: 2.5rem;
+    font-size: 1.6rem;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.081);
+    border-radius: .5rem;
+    font-weight: lighter;
+    padding: .34rem .34rem;
+}
+
+.packages .box-container .box .content {
+    padding: 2.5rem;
+    padding-top: 0;
+    align-items: center;
+}
+
+.packages .box-container .box .content .price {
+    font-weight: 600;
+    color: var(--text-color-1);
+    font-size: 2.5rem;
+}
+
+.packages .box-container .box .content .price span {
+    font-weight: lighter;
+    color: var(--text-color-2);
+    font-size: 1.5rem;
+    text-decoration: line-through;
+}
+
+.packages .box-container .box .content p{
+    font-size: 1.5rem;
+    padding: 2.5rem 0;
+    color: var(--text-color-2);
+    line-height: 1.7;
+}
